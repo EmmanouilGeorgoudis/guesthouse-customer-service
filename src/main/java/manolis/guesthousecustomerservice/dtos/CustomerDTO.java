@@ -1,4 +1,4 @@
-package com.example.guesthousebookingsystem.dtos;
+package manolis.guesthousecustomerservice.dtos;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
