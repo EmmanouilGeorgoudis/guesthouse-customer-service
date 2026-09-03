@@ -1,4 +1,4 @@
-package com.example.guesthousebookingsystem.services.impl;
+package manolis.guesthousecustomerservice.services.impl;
 
 
 import com.example.guesthousebookingsystem.dtos.CustomerDTO;

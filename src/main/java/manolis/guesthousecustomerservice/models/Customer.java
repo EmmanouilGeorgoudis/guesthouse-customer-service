@@ -1,4 +1,4 @@
-package com.example.guesthousebookingsystem.models;
+package manolis.guesthousecustomerservice.models;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

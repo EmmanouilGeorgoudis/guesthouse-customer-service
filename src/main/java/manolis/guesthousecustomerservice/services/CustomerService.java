@@ -1,4 +1,4 @@
-package com.example.guesthousebookingsystem.services;
+package manolis.guesthousecustomerservice.services;
 
 import com.example.guesthousebookingsystem.dtos.CustomerDTO;
 import java.util.List;
