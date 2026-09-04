@@ -1,6 +1,6 @@
 package manolis.guesthousecustomerservice.services;
 
-import com.example.guesthousebookingsystem.dtos.CustomerDTO;
+import manolis.guesthousecustomerservice.dtos.CustomerDTO;
 import java.util.List;
 
 public interface CustomerService {
