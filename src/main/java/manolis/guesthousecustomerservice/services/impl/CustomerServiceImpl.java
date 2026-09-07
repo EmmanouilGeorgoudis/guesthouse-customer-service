@@ -2,10 +2,12 @@ package manolis.guesthousecustomerservice.services.impl;
 
 
 
-import com.example.guesthousebookingsystem.models.Customer;
-import com.example.guesthousebookingsystem.repositories.BookingRepository;
-import com.example.guesthousebookingsystem.repositories.CustomerRepository;
-import com.example.guesthousebookingsystem.services.CustomerService;
+
+
+import manolis.guesthousecustomerservice.dtos.CustomerDTO;
+import manolis.guesthousecustomerservice.models.Customer;
+import manolis.guesthousecustomerservice.repositories.CustomerRepository;
+import manolis.guesthousecustomerservice.services.CustomerService;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -16,11 +18,10 @@ import java.util.List;
 
 public class CustomerServiceImpl implements CustomerService {
     private final CustomerRepository customerRepository;
-    private final BookingRepository bookingRepository;
 
-    public CustomerServiceImpl(CustomerRepository customerRepository, BookingRepository bookingRepository) {
+
+    public CustomerServiceImpl(CustomerRepository customerRepository) {
         this.customerRepository = customerRepository;
-        this.bookingRepository = bookingRepository;
     }
 
     @Override
@@ -45,13 +46,13 @@ public class CustomerServiceImpl implements CustomerService {
         customerRepository.save(customer);
 
     }
-    @Override
-    public void delete(Long id) {
-        if (bookingRepository.existsByCustomerId(id)) {
-            throw new RuntimeException("Can't remove customers with active bookings!");
-        }
-        customerRepository.deleteById(id);
-    }
+//    @Override
+//    public void delete(Long id) {
+//        if (bookingRepository.existsByCustomerId(id)) {
+//            throw new RuntimeException("Can't remove customers with active bookings!");
+//        }
+//        customerRepository.deleteById(id);
+//    }
 
 
 }
