@@ -1,8 +1,8 @@
-package manolis.guesthousecustomerservice.controllers;
+package example.guesthousecustomerservice.controllers;
 
 
-import manolis.guesthousecustomerservice.dtos.CustomerDTO;
-import manolis.guesthousecustomerservice.services.CustomerService;
+import example.guesthousecustomerservice.dtos.CustomerDTO;
+import example.guesthousecustomerservice.services.CustomerService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;

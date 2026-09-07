@@ -1,7 +1,7 @@
-package manolis.guesthousecustomerservice.repositories;
+package example.guesthousecustomerservice.repositories;
 
 
-import manolis.guesthousecustomerservice.models.Customer;
+import example.guesthousecustomerservice.models.Customer;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface CustomerRepository extends JpaRepository<Customer, Long> {

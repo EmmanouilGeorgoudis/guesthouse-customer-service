@@ -1,4 +1,4 @@
-package manolis.guesthousecustomerservice.dtos;
+package example.guesthousecustomerservice.dtos;
 
 public class CustomerDTO {
     private String name;

@@ -1,13 +1,13 @@
-package manolis.guesthousecustomerservice.services.impl;
+package example.guesthousecustomerservice.services.impl;
 
 
 
 
 
-import manolis.guesthousecustomerservice.dtos.CustomerDTO;
-import manolis.guesthousecustomerservice.models.Customer;
-import manolis.guesthousecustomerservice.repositories.CustomerRepository;
-import manolis.guesthousecustomerservice.services.CustomerService;
+import example.guesthousecustomerservice.dtos.CustomerDTO;
+import example.guesthousecustomerservice.models.Customer;
+import example.guesthousecustomerservice.repositories.CustomerRepository;
+import example.guesthousecustomerservice.services.CustomerService;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

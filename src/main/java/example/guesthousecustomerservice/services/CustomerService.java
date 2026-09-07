@@ -1,7 +1,7 @@
-package manolis.guesthousecustomerservice.services;
+package example.guesthousecustomerservice.services;
 
 
-import manolis.guesthousecustomerservice.dtos.CustomerDTO;
+import example.guesthousecustomerservice.dtos.CustomerDTO;
 
 import java.util.List;
 
