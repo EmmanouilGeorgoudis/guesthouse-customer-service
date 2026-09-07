@@ -1,7 +1,7 @@
 package manolis.guesthousecustomerservice.services.impl;
 
 
-import com.example.guesthousebookingsystem.dtos.CustomerDTO;
+
 import com.example.guesthousebookingsystem.models.Customer;
 import com.example.guesthousebookingsystem.repositories.BookingRepository;
 import com.example.guesthousebookingsystem.repositories.CustomerRepository;
