@@ -46,8 +46,10 @@ public class CustomerServiceImpl implements CustomerService {
         customerRepository.save(customer);
 
     }
-//    @Override
-//    public void delete(Long id) {
+  @Override
+   public void delete(Long id) {
+        customerRepository.deleteById(id);
+  }
 //        if (bookingRepository.existsByCustomerId(id)) {
 //            throw new RuntimeException("Can't remove customers with active bookings!");
 //        }
