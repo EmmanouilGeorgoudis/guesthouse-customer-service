@@ -4,7 +4,9 @@ package example.guesthousecustomerservice.services.impl;
 
 
 
+import example.guesthousecustomerservice.clients.BookingServiceClient;
 import example.guesthousecustomerservice.dtos.CustomerDTO;
+import example.guesthousecustomerservice.exceptions.CustomerHasActiveBookingsException;
 import example.guesthousecustomerservice.models.Customer;
 import example.guesthousecustomerservice.repositories.CustomerRepository;
 import example.guesthousecustomerservice.services.CustomerService;
@@ -18,10 +20,12 @@ import java.util.List;
 
 public class CustomerServiceImpl implements CustomerService {
     private final CustomerRepository customerRepository;
+    private final BookingServiceClient bookingServiceClient;
 
 
-    public CustomerServiceImpl(CustomerRepository customerRepository) {
+    public CustomerServiceImpl(CustomerRepository customerRepository, BookingServiceClient bookingServiceClient) {
         this.customerRepository = customerRepository;
+        this.bookingServiceClient = bookingServiceClient;
     }
 
     @Override
@@ -46,16 +50,13 @@ public class CustomerServiceImpl implements CustomerService {
         customerRepository.save(customer);
 
     }
-  @Override
-   public void delete(Long id) {
+    @Override
+    public void delete(Long id) {
+        if (bookingServiceClient.hasActiveBookings(id)) {
+            throw new CustomerHasActiveBookingsException("Can't remove customer with active booking!");
+        }
         customerRepository.deleteById(id);
-  }
-//        if (bookingRepository.existsByCustomerId(id)) {
-//            throw new RuntimeException("Can't remove customers with active bookings!");
-//        }
-//        customerRepository.deleteById(id);
-//    }
-
+    }
 
 }
 
