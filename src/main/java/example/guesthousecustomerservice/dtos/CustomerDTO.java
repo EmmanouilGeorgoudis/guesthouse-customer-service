@@ -1,6 +1,8 @@
 package example.guesthousecustomerservice.dtos;
+import jakarta.validation.constraints.NotBlank;
 
 public class CustomerDTO {
+    @NotBlank(message = "Name is required")
     private String name;
     private Long id;
 
